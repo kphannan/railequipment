@@ -9,7 +9,9 @@ spring:
 
 server:
   address: 127.0.0.1
+  servlet.context-path: /rail
   email: kphanann@gmail.com
+
 
   datasource:
     driverClassName: com.mysql.jdbc.Driver
