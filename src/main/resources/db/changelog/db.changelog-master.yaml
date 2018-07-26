@@ -1,0 +1,4 @@
+databaseChangeLog:
+
+  - include:
+      file: db/changelog/scripts/00001-add-carrier-tables.yaml
