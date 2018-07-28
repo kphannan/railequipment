@@ -2,6 +2,12 @@ package info.trackwarrant.rail.equipment;
 
 
 
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 import lombok.AllArgsConstructor;
 import lombok.NonNull;
 import lombok.experimental.FieldDefaults;
@@ -23,12 +29,19 @@ import static lombok.AccessLevel.PACKAGE;
 import static lombok.AccessLevel.PRIVATE;
 
 
+import info.trackwarrant.rail.equipment.carrier.Carrier;
+
+
+
+
 @RestController
 @RequestMapping("/equipment")
 @AllArgsConstructor( access = PACKAGE )
 @FieldDefaults( level = PRIVATE, makeFinal = true )
 class EquipmentController
 {
+    private static final Logger log = LoggerFactory.getLogger(EquipmentController.class);
+
     @NonNull
     RollingStockService rollingStockService;
     @NonNull
@@ -63,6 +76,23 @@ class EquipmentController
         return "post locomotive card";
     }
 
+
+
+    @GetMapping( "/carrier" )
+    public List<Carrier> carrier()
+    {
+        // public CommandLineRunner demo(CarrierRepository repository) {
+        // return (args) -> {
+        //     // fetch all Carriers
+            log.info("Carriers found with findAll():");
+            log.info("-------------------------------");
+            // for (Carrier carrier : repository.findAll()) {
+            //     log.info(carrier.toString());
+            // }
+            log.info("");
+
+            return null;
+    }
 
 
 

@@ -15,10 +15,7 @@ implements CarrierService
     @Override
     public Carrier carrier()
     {
-        final Carrier carrier = new Carrier();
-
-        carrier.setScac( "EL" );
-        carrier.setName( "Erie Lackawanna" );
+        final Carrier carrier = new Carrier( "EL", "Erie Lackawanna");
 
         return carrier;
     }
