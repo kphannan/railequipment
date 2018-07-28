@@ -1,9 +1,11 @@
-package info.trackwarrant.rail.equipment.locomotive;
+package info.trackwarrant.rail.equipment.locomotive.service;
 
 
 // import package info.trackwarrant.rail.equipment.locomotive;;
 import org.springframework.stereotype.Service;
 
+import info.trackwarrant.rail.equipment.locomotive.Locomotive;
+import info.trackwarrant.rail.equipment.locomotive.LocomotiveService;
 
 
 @Service

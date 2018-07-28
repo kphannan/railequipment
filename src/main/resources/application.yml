@@ -32,9 +32,30 @@ server:
 
 management:
   endpoints:
+    enabled-by-default: true
+
     web:
       exposure:
         include: "*"
+
+    jmx:
+      exposure:
+        include: "*"
+
+    endpoints.sensitive: true
+    actuator.enabled: true
+    autoconfig.enabled: false
+    beans.enabled: true
+    configprops.enabled: false
+    dump.enabled: true
+    env.enabled: false
+    health.enabled: true
+    info.enabled: true
+    logfile.enabled: false
+    metrics.enabled: true
+    mappings.enabled: false
+    shutdown.enabled: true
+    trace.enabled: false
 
   endpoint:
     health:
@@ -42,6 +63,25 @@ management:
 
     shutdown:
       enabled: true
+
+
+
+endpoints:
+  endpoints.sensitive: true
+  actuator.enabled: true
+  autoconfig.enabled: false
+  beans.enabled: true
+  configprops.enabled: false
+  dump.enabled: true
+  env.enabled: false
+  health.enabled: true
+  info.enabled: true
+  logfile.enabled: false
+  metrics.enabled: true
+  mappings.enabled: false
+  shutdown.enabled: true
+  trace.enabled: false
+
 
 liquibase:
   change-log: classpath:db/changelog/db.changelog-master.yaml
