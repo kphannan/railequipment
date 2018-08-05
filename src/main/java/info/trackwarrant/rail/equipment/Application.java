@@ -66,13 +66,13 @@ public class Application {
             log.info("");
 
             // fetch an individual customer by ID
-            repository.findById("EL")
-                .ifPresent(carrier -> {
-                    log.info("Carrier found with findById('EL'):");
-                    log.info("--------------------------------");
-                    log.info(carrier.toString());
-                    log.info("");
-                });
+            // repository.findById("EL")
+            //     .ifPresent(carrier -> {
+            //         log.info("Carrier found with findById('EL'):");
+            //         log.info("--------------------------------");
+            //         log.info(carrier.toString());
+            //         log.info("");
+            //     });
 
             // // fetch customers by last name
             // log.info("Carrier found with findByName('Erie Lackawanna'):");
